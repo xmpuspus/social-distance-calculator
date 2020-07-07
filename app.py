@@ -46,7 +46,7 @@ popn = st.sidebar.number_input('Number of people in your area:',
 
 deaths = st.sidebar.number_input('Number of deaths by covid in your area:', 
                                                    min_value=0, max_value=popn, value=40)
-square_area = st.sidebar.number_input("Land area in sqm:", min_value=1, max_value=popn, value=217)
+square_area = st.sidebar.number_input("Land area in sq km:", min_value=1, max_value=popn, value=217)
 
 allowed = allowed_out(deaths, popn, square_area)
 
