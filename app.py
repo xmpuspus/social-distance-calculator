@@ -50,6 +50,8 @@ square_area = st.sidebar.number_input("Land area in sq km:", min_value=1, max_va
 
 allowed = allowed_out(deaths, popn, square_area)
 
+allowed_percent = allowed * 100. / (popn / square_area)
+
 st.subheader("Recommendation...")
 
-st.write(f"Only {allowed} people per square km are allowed.")
+st.write(f"Only **{int(allowed_percent)} percent** of people are allowed outside.")
